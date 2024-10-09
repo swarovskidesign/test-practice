@@ -1,0 +1,67 @@
+[
+
+    {
+
+        "ЛОГИКА РАБОТЫ С ТЕРМИНАЛОМ:": 1,
+        "СНАЧАЛА ЧЕТ ДЕЛАЕШЬ": 2,
+        "ПОТОМ ОТПРАВЛЯЕШЬ КОМАНДОЙ ИЗМЕНЕНИЯ": 3,
+        
+        "git push <name> <branch_name>": "основная команда отправки изменений"
+
+    },
+
+    {
+        "main command": 1,
+
+        "git init": "создать новый локальный репозиторий",
+        "git clone <url>": "клон удаленного репозитория",
+        "git remote add <url>/<name_repositories>": "",
+        "git status": "статус",
+        "git log": "все логи",
+        "git add <file-name>": "выбрать файл для коммита",
+        "git commit -m 'сообщение'": "коммит",
+        "git pull <name> <branch_name>": "пулл"
+
+    },
+
+    {
+        "with branch": 2,
+
+        "git branch": "все локальные ветки",
+        "git branch -r": "все удаленные ветки",
+        "git checkout <branch_name>": "свич ветки",
+        "git push <name> <branch_name>": "отправить ветку на ремот",
+        "git branch -d/-D <branch_name>": "удаление/принудительное удаление локальной ветки",
+        "git push <name> --delete <branch_name>": "удаление ремот ветки"
+
+
+    },
+
+    {
+        "file managment": 3,
+
+        "git rm <file_name>": "локально удалить файл",
+        "git rm --cached <file_name>": "кешированное удаление для ремота",
+        "git reset <file_name>": "убрать из индекса"
+
+    },
+
+    {
+        "with remote repositories": 4,
+
+        "git remote -v": "список ремот репозиториев",
+        "git remote add <name> <url>": "добавить новый репозиторий"
+
+    },
+
+
+    {
+        "CANCEL COMMIT": 5,
+
+
+        "git reset --hard HEAD~*": "УДАЛЕНИЕ ВСЕХ ПУШНУТЫХ КОММИТОВ",
+        "git --force": "ОТПРАВКА ИЗМЕНЕНИЙ"
+
+
+    }
+]
