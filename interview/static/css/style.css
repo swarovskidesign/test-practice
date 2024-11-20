@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+.slide {
+    height: 100vh;
+    font-size: 28px;
+    padding: 0% 2% 0% 2%;
+    color: rgb(214, 214, 214);
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.first_text p {
+    margin-top: 10px;
+}
+
+.first_page, .third_page, .fourth_page {
+    flex-direction: column;
+    gap: 70px;
+}
+
+.second_page {
+    position: relative;
+}
+
+.fir {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.pervy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    font-size: 28px;
+    padding: 10px;
+    width: 100%;
+}
+
+.vtoroj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    gap: 50px;
+    font-size: 28px;
+}
+
+.third_page img {
+    height: 100px;
+    width: 100px;
+}
+
+.profile_one, .profile_two, .profile_three {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+    background-color: #e26190;
+    border-radius: 15px;
+    font-size: 26px;
+    padding: 1% 2%;
+}
+
+.profile_one, .profile_three {
+    align-self: flex-end;
+}
+
+.profile_two {
+    align-self: flex-start;
+    align-items: flex-end;
+}
+
+.logo_prof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.text_for_one, .text_for_two, .text_for_three {
+    text-align: center;
+    width: 50%;
+}
+
+.button, .button_soft {
+    background-color: #555555;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .button_soft:hover {
+    background-color: #696969;
+    cursor: pointer;
+}
+
+.bottom_info {
+    text-align: center;
+    padding: 1% 3% 1% 3%;
+    width: 70%;
+    background-color: #e26190;
+    border-radius: 15px;
+}
+
+.bottom_info p {
+    font-size: 28px;
+    color: #fff;
+}
+
+.modal_window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    width: 100vh;
+    margin-top: 100px;
+}
+
+.one_soft, .two_soft, .three_soft {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    height: 288px;
+    background-color: #e26190;
+    border-radius: 15px;
+    padding: 1% 3% 1% 3%;
+}
+
+.one_soft img, .two_soft img, .three_soft img {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+}
+
+.pervy input[type="range"] {
+    width: 50%;
+    height: 6px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.pervy input[type="range"]::-webkit-slider-runnable-track {
+    background: #282828;
+    height: 6px;
+    border-radius: 10px;
+}
+
+.pervy input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin-top: -5px;
+    transition: background-color 0.2s ease;
+}
+
+.pervy input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: #e26190;
+}
+
+.pervy input[type="range"]::-moz-range-track {
+    background-color: #3d3d3d;
+    height: 6px;
+}
+
+.pervy input[type="range"]::-moz-range-thumb {
+    background-color: #3d3d3d;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: background-color 0.2s ease;
+}
+
+.pervy input[type="range"]:hover::-moz-range-thumb {
+    background-color: #e26190;
+}
+
+.hidden-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden-text.show {
+    opacity: 1;
+}

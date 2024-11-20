@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename = 'images/icon.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <section class="slide first_page">
+        {% block content_for_first_page %}{% endblock %}
+    </section>
+
+    <section class="slide second_page">
+        
+        {% block content_for_second_page %}{% endblock %}
+
+    </section>
+
+    <section class="slide third_page">
+
+        {% block content_for_tri_page %}{% endblock %}
+
+    </section>
+
+    <section class="slide fourth_page">
+
+        {% block content_for_four_page %}{% endblock %}
+
+    </section>
+
+    <script src = "{{ url_for('static', filename = 'js/hidden_text.js') }}"></script>
+    <script src = "{{ url_for('static', filename = 'js/wheel_scroll.js') }}"></script>
+</body>
+</html>
