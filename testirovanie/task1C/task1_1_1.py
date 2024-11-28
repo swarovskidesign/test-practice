@@ -2,6 +2,7 @@ import cmath
 
 class Solution:
 
+    @staticmethod
     def solve_quadratic(a, b, c):
         if a == 0:
             raise ValueError("a != 0")
@@ -11,10 +12,10 @@ class Solution:
         if D > 0:
             x1 = (-b + cmath.sqrt(D)) / (2 * a)
             x2 = (-b - cmath.sqrt(D)) / (2 * a)
-            return (x1, x2)
+            return (x1.real, x2.real)
         elif D == 0:
             x = -b / (2 * a)
-            return (x)
+            return (x,)
         else:
             x1 = (-b + cmath.sqrt(D)) / (2 * a)
             x2 = (-b - cmath.sqrt(D)) / (2 * a)
