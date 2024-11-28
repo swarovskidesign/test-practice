@@ -2,7 +2,10 @@ import math
 
 class Solution:
 
+    @staticmethod
     def check_triangle(a, b, c):
+        if a <= 0 or b <= 0 or c <= 0:
+            return "ошибка - Стороны должны быть положительными"
         
         if a + b <= c or a + c <= b or b + c <= a:
             return "ошибка - Стороны не могут образовать треугольник"
