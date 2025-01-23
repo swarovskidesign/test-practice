@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/formain.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logosite.jpg' %}">
+    <title>CRYAT</title>
+</head>
+<body>
+
+    <div class="main_page">
+        <div class="footer">
+            <div class="footer_first">
+                <a href="{% url "main:home" %}"><img src="{% static 'img/logo.png' %}"></a>
+            </div>
+
+            <div class="footer_second">
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'usermanage:profile' user.token %}">
+                        <p><strong>Personal Page</strong></p>
+                        <img src="{% static 'img/profile.png' %}">
+                    </a>
+                {% else %}
+                    <a href="{% url 'usermanage:authbynick' %}">
+                        <p><strong>Personal Page</strong></p>
+                        <img src="{% static 'img/profile.png' %}">
+                    </a>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <div class="main_info">
+            <div class="modalwindow">
+
+                <div class="text_modal_window">
+                    <p>How to <strong>become</strong> a client and <strong>open</strong> wallets?</p>
+                </div>
+
+                <div class="step_signin">
+                    <div class="first_step">
+                        <h1>1</h1>
+                        <p><strong>Register</strong> successfully</p>
+                    </div>
+
+                    <div class="second_step">
+                        <h1>2</h1>
+                        <p><strong>Confirm</strong> details</p>
+                        
+                    </div>
+
+                    <div class="three_step">
+                        <h1>3</h1>
+                        <p><strong>Open</strong> wallets</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_el">
+
+            <div class="cookie">
+                <p>By continuing to use the site, I agree to the processing of cookies</p>
+                <button>I understand</button>
+            </div>
+
+            <div class="chat">
+                <a href="{% url "main:feedback" %}"><img src="{% static 'img/chat.png' %}"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/forauthbynick.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/logosite.jpg' %}">
+    <title>Sign in - CRYAT</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="footer">
+            <div class="left">
+                <a href="{% url "main:home" %}"><img src="{% static "img/logo.png" %}" alt=""></a>
+            </div>
+            <div class="right">
+                <a href="{% url "main:feedback" %}"><img src="{% static "img/chat.png" %}" alt=""></a>
+            </div>
+        </div>
+
+        <div class="authhelp">
+            <div class="auth">
+                <div class="data">
+                    <form action="/mywallets/auth0/" method="POST">
+                        
+                        {% csrf_token %}
+
+                        {{ form.username }}
+                        {{ form.password }} 
+
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div>
+
+                <div class="swaph">
+                    <a href="{% url 'usermanage:authbyaccount' %}">
+                        <button class="swap_metod">login by account number</button>
+                    </a>
+                    <a href="{% url "usermanage:rega" %}">I havn't wallets</a>
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

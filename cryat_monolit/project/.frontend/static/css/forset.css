@@ -1,0 +1,110 @@
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #363636;
+    color: rgb(224, 224, 224);
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+    background-color: #2D2D2D;
+    border-bottom: 2px solid #BA2B2B;
+    align-items: center;
+}
+
+.logo img {
+    width: 160px;
+    height: 50px;
+}
+
+.header-icons a, .logout-btn {
+    margin-left: 20px;
+}
+
+.header-icons img, .logout-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.content {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.user-info {
+    flex: 1;
+    background-color: #2D2D2D;
+    padding: 20px;
+    border-radius: 15px;
+    color: #E0E0E0;
+}
+
+.settings {
+    flex: 2;
+    background-color: #2D2D2D;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1, h2 {
+    color: #BA2B2B;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #BA2B2B;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #BA2B2B;
+    background-color: #363636;
+    color: #E0E0E0;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF4D4D;
+}
+
+button {
+    background-color: #BA2B2B;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4D4D;
+}
